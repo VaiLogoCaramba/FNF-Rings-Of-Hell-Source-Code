@@ -10,11 +10,11 @@ import objects.Character;
 
 enum Countdown
 {
-	THREE;
-	TWO;
-	ONE;
-	GO;
-	START;
+	(THREE);
+	(TWO);
+	(ONE);
+	(GO);
+	(START);
 }
 
 class BaseStage extends FlxBasic
