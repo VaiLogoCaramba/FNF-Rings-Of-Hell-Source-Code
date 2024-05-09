@@ -26,14 +26,14 @@ class StageData {
 	{
 		return {
 			directory: "",
-			defaultZoom: 0.9,
+			defaultZoom: 0.85,
 			isPixelStage: false,
 			stageUI: "normal",
 
 			boyfriend: [770, 100],
 			girlfriend: [400, 130],
 			opponent: [100, 100],
-			hide_girlfriend: false,
+			hide_girlfriend: true,
 
 			camera_boyfriend: [0, 0],
 			camera_opponent: [0, 0],
@@ -87,9 +87,9 @@ class StageData {
 
 		#if MODS_ALLOWED
 		var modPath:String = Paths.modFolders('stages/' + stage + '.json');
-		if(FileSystem.exists(modPath)) {
+		if(Assets.exists(modPath)) {
 			rawJson = File.getContent(modPath);
-		} else if(FileSystem.exists(path)) {
+		} else if(Assets.exists(path)) {
 			rawJson = File.getContent(path);
 		}
 		#else
