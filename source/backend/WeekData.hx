@@ -53,8 +53,8 @@ class WeekData {
 			freeplayColor: [146, 113, 253],
 			startUnlocked: true,
 			hiddenUntilUnlocked: false,
-			hideStoryMode: false,
-			hideFreeplay: false,
+			hideStoryMode: true,
+			hideFreeplay: true,
 			difficulties: ''
 		};
 		return weekFile;
@@ -112,7 +112,7 @@ class WeekData {
 		#if MODS_ALLOWED
 		for (i in 0...directories.length) {
 			var directory:String = directories[i] + 'weeks/';
-			if(FileSystem.exists(directory)) {
+			if(Assets.exists(directory)) {
 				var listOfWeeks:Array<String> = CoolUtil.coolTextFile(directory + 'weekList.txt');
 				for (daWeek in listOfWeeks)
 				{
